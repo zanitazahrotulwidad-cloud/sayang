@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:linear-gradient(135deg,#FFD6E7,#FFF8FC);
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.card{
+
+    width:100%;
+    max-width:420px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    animation:fade 1.5s;
+}
+
+.card h3{
+
+    color:#F48FB1;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+}
+
+.card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:52px;
+
+    color:#D63384;
+
+    margin-bottom:20px;
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#F48FB1;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    background:#EC6EAD;
+}
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+.popup-card{
+
+    width:100%;
+    max-width:350px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    animation:fade .5s;
+}
+
+.popup-card h2{
+
+    color:#D63384;
+
+    margin-bottom:10px;
+}
+
+.popup-card p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+}
+
+.popup-card input{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:2px solid #FFD6E7;
+
+    outline:none;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-size:18px;
+}
+
+#message{
+
+    margin-top:15px;
+
+    color:red;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE HP
+=========================== */
+
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    .card{
+
+        padding:30px 22px;
+
+    }
+
+    .card h1{
+
+        font-size:42px;
+
+    }
+
+    .card h3{
+
+        font-size:17px;
+
+    }
+
+    .card p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+    .popup-card{
+
+        padding:25px 20px;
+
+    }
+
+    .popup-card h2{
+
+        font-size:24px;
+
+    }
+
+    .popup-card input{
+
+        font-size:16px;
+
+    }
+
+}

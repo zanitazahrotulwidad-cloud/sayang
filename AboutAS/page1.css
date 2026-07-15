@@ -1,0 +1,377 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px 15px;
+    background:linear-gradient(135deg,#FFD6E7,#FFF5F8,#FFEFF5);
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+/* ===========================
+   ENVELOPE
+=========================== */
+
+.envelope{
+    position:relative;
+    width:320px;
+    height:210px;
+    background:#F8BBD0;
+    border-radius:12px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    overflow:hidden;
+    transition:.5s;
+}
+
+/* Tutup amplop */
+
+.envelope-top{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#F48FB1;
+    clip-path:polygon(0 0,100% 0,50% 58%);
+    transition:.8s;
+}
+
+/* Bagian bawah */
+
+.envelope::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background:#FFD6E7;
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+}
+
+/* Hati */
+
+.heart{
+    position:absolute;
+    top:48%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:40px;
+    color:#fff;
+    z-index:5;
+    animation:beat 1.2s infinite;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+#openBtn{
+
+    margin-top:35px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#EC407A;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(236,64,122,.3);
+
+}
+
+#openBtn:hover{
+
+    transform:translateY(-4px);
+
+    background:#D81B60;
+
+}
+
+/* ===========================
+   LETTER ROMANTIC STYLE
+=========================== */
+
+.letter{
+
+    display:none;
+
+    width:100%;
+
+    background:#FFF8F4;
+
+    margin:25px auto;
+
+    padding:25px;
+
+    border-radius:22px;
+
+    border:3px solid #FFD6E7;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12),
+    inset 0 0 20px rgba(255,214,231,.3);
+
+    position:relative;
+
+    animation:showLetter .8s ease;
+
+}
+
+/* bunga atas */
+
+.letter::before{
+
+    content:"🌸 🌷 🌸";
+
+    position:absolute;
+
+    top:15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:28px;
+
+}
+
+/* bunga bawah */
+
+.letter::after{
+
+    content:"🌸 🌷 🌸";
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:28px;
+
+}
+
+.letter h1{
+
+    text-align:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:48px;
+
+    color:#D63384;
+
+    margin:25px 0;
+
+}
+
+.letter h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:180px;
+
+    height:2px;
+
+    background:#F8BBD0;
+
+    margin:15px auto;
+
+}
+
+.letter p{
+
+    line-height:1.9;
+
+    color:#666;
+
+    font-size:16px;
+
+    text-align:left;
+
+    padding:0;
+
+}
+
+/* tanda tangan */
+
+.signature{
+
+    text-align:right;
+
+    margin-top:30px;
+
+    color:#D63384;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:34px;
+
+}
+
+.letter button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    float:none;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#F48FB1,#EC407A);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.letter button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes beat{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.2);
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+}
+
+@keyframes showLetter{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE HP
+=========================== */
+
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+        display:block;
+    }
+
+    .container{
+        max-width:100%;
+        min-height:100vh;
+    }
+
+    .envelope{
+        width:240px;
+        height:160px;
+    }
+
+    .heart{
+        font-size:28px;
+    }
+
+    #openBtn{
+        width:100%;
+        max-width:240px;
+        font-size:15px;
+        padding:14px;
+    }
+
+    .letter{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .letter h1{
+        font-size:38px;
+    }
+
+    .letter p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .signature{
+        font-size:30px;
+    }
+
+    .letter button{
+        width:100%;
+        font-size:15px;
+    }
+}

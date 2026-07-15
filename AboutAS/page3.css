@@ -1,0 +1,308 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+
+    background:linear-gradient(135deg,#FFD6E7,#FFF5F8,#FFEFF5);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:100%;
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.quiz-card{
+
+    background:#FFF8F4;
+
+    border-radius:25px;
+
+    padding:30px 25px;
+
+    border:3px solid #FFD6E7;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    animation:fade .8s;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.quiz-card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:50px;
+
+    color:#D63384;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   QUESTION
+=========================== */
+
+.question-box{
+
+    text-align:center;
+
+}
+
+.question-box h2{
+
+    color:#D63384;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:2px solid #F8BBD0;
+
+    outline:none;
+
+    font-size:16px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#EC407A;
+
+    box-shadow:0 0 10px rgba(236,64,122,.2);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#F48FB1,#EC407A);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 20px rgba(236,64,122,.25);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   MESSAGE
+=========================== */
+
+#message{
+
+    margin-top:18px;
+
+    font-size:15px;
+
+    color:#EC407A;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   PHOTO
+=========================== */
+
+.photo-box{
+
+    display:none;
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.photo-box img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    border:3px solid #FFD6E7;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    margin-bottom:20px;
+
+}
+
+.photo-box h3{
+
+    color:#D63384;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:480px){
+
+    .quiz-card{
+
+        padding:25px 20px;
+
+    }
+
+    .quiz-card h1{
+
+        font-size:42px;
+
+    }
+
+    .question-box h2{
+
+        font-size:21px;
+
+    }
+
+    input{
+
+        font-size:15px;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+    }
+
+    .photo-box h3{
+
+        font-size:18px;
+
+    }
+
+}

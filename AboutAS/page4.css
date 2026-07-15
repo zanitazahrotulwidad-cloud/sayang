@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #ffe6ee,
+        #fff7e6
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.container{
+
+    text-align:center;
+    width:90%;
+}
+
+
+
+h1{
+
+    color:#d45d79;
+    margin-bottom:10px;
+
+}
+
+
+.subtitle{
+
+    color:#777;
+    margin-bottom:40px;
+
+}
+
+
+
+/* KOTAK */
+
+.box-area{
+
+    cursor:pointer;
+}
+
+
+.box{
+
+    width:170px;
+    height:120px;
+
+    background:#e88da7;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:60px;
+
+    box-shadow:0 15px 25px #0002;
+
+    transition:.6s;
+
+}
+
+
+
+.lid{
+
+    width:180px;
+    height:35px;
+
+    background:#d86b8c;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    transition:.6s;
+
+}
+
+
+
+.box-area.open .lid{
+
+    transform:
+    translateY(-70px)
+    rotate(-20deg);
+
+}
+
+
+
+.box-area.open .box{
+
+    transform:
+    translateY(20px);
+
+}
+
+
+
+#openText{
+
+    margin-top:20px;
+
+    color:#888;
+
+}
+
+
+
+/* FOTO */
+
+.memory{
+
+    margin-top:30px;
+
+}
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+.memory img{
+
+    width:280px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    background:white;
+
+    padding:10px;
+
+    box-shadow:
+    0 10px 30px #0003;
+
+
+    animation: muncul .8s;
+
+}
+
+
+
+.memory h2{
+
+    margin:20px;
+
+    color:#c74f70;
+
+}
+
+
+
+button{
+
+    border:none;
+
+    background:#d86b8c;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#c05272;
+
+}
+
+
+
+@keyframes muncul{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(80px)
+        rotate(10deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        rotate(0);
+
+    }
+
+}
